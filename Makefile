@@ -7,4 +7,4 @@ run:
 	cp $(SCRIPT) /Volumes/CIRCUITPY/code.py
 
 repl:
-	@exec screen $(TTY) 115200
+	@exec screen /dev/tty.usb* 115200
