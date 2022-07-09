@@ -6,5 +6,9 @@ all:
 run:
 	cp $(SCRIPT) /Volumes/CIRCUITPY/code.py
 
+.PHONY: pdm_microphone.py
+pdm_microphone.py:
+	cp pdm_microphone.py /Volumes/CIRCUITPY/code.py
+
 repl:
 	@exec screen /dev/tty.usb* 115200
