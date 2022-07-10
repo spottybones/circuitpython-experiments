@@ -2,6 +2,10 @@
 #
 # SPDX-License-Identifier: MIT
 
+"""Adapted from the example code DM_Mic_Sound_Level_Plot.py
+https://github.com/adafruit/Adafruit_Learning_System_Guides/
+blob/master/PDM_Microphone/PDM_Mic_Sound_Level_Plot.py """
+
 import time
 import array
 import math
