@@ -1,0 +1,4 @@
+simpleio==3.0.9
+adafruit_requests==1.12.11
+adafruit_bus_device==5.2.3
+adafruit_esp32spi==5.0.5
