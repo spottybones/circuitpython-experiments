@@ -7,10 +7,10 @@ Connect. They are based on scripts I've worked through on Adafruit's
 
 ## Running the Scripts
 
-I use a Makefile that has a target for each script that copies it
+I use a Justfile that has a recipe for each script that copies it
 over the existing `code.py` file on the mounted CIRCUITPY drive on
-my Mac. I also have a target that runs `screen` to connect to the
-board's REPL for serial output and debugging. I typically run this
+my Mac. I also have a recipe that runs `screen` to connect to the
+board's REPL for serial output and debugging. I run this
 in a separate TMUX pane and this essentially duplicates the
 functionality of the recommended `mu` editor while letting me keep
 my code in a Git repo and using Neovim or Vim for editing.
