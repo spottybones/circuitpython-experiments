@@ -5,6 +5,7 @@ set positional-arguments
 
 # set some constants
 BOARD_PATH := "/Volumes/CIRCUITPY"
+PWD := invocation_directory()
 
 # default
 _default:
@@ -13,11 +14,11 @@ _default:
 # update code.py on board
 up FILE:
 	@echo Updating code on board...
-	cp {{FILE}} {{BOARD_PATH}}/code.py
+	@cp {{PWD}}/{{FILE}} {{BOARD_PATH}}/code.py
 
 # copy secrets to the board
 copy-secrets:
-	cp secrets.py {{BOARD_PATH}}/
+	cp {{PWD}}/secrets.py {{BOARD_PATH}}/
 
 # connect to the board REPL
 repl:
@@ -27,6 +28,6 @@ repl:
 unmount:
 	@diskutil unmount {{BOARD_PATH}}
 
-# install required libraries
+# install required libraries via circup
 install-libraries:
-	@-circup --path {{BOARD_PATH}} install -r requirements.txt
+	@-circup --path {{BOARD_PATH}} install -r {{PWD}}/requirements.txt
