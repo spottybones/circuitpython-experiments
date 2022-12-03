@@ -1,0 +1,2 @@
+adafruit_pixelbuf==1.1.8
+neopixel==6.3.7
