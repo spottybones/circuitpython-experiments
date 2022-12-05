@@ -34,5 +34,5 @@ install-libraries:
 # copy my simple libraries
 install-my-libraries:
 	@echo Updating my libraries
-	@cp my_palettes.py {{BOARD_PATH}}/
-	@cp my_boardcheck.py {{BOARD_PATH}}/
+	@cp {{PWD}}/my_palettes.py {{BOARD_PATH}}/
+	@cp {{PWD}}/my_boardcheck.py {{BOARD_PATH}}/
