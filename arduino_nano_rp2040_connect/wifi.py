@@ -16,7 +16,7 @@ from adafruit_esp32spi import adafruit_esp32spi
 
 # Get wifi details and more from a secrets file
 try:
-    from secrets import secrets
+    from .secrets import secrets
 except ImportError:
     print("WiFi secrets are kept in secrets.py, please add them there!")
     raise
