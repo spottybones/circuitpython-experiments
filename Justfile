@@ -21,7 +21,7 @@ copy-secrets:
 
 # connect to the board REPL
 repl:
-	@exec screen /dev/tty.usb* 115200
+	@exec tio -b 115200 /dev/tty.usb*
 
 # unmount the board before reboot or eject
 unmount:
