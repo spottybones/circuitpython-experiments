@@ -60,7 +60,9 @@ RAINBOW_WAIT = 0.01
 
 while True:
     if color_chase_demo:
-        color_chase(RED, COLOR_CHASE_SPEED)  # Increase the number to slow down the color chase
+        color_chase(
+            RED, COLOR_CHASE_SPEED
+        )  # Increase the number to slow down the color chase
         color_chase(YELLOW, COLOR_CHASE_SPEED)
         color_chase(GREEN, COLOR_CHASE_SPEED)
         color_chase(CYAN, COLOR_CHASE_SPEED)
@@ -84,8 +86,9 @@ while True:
         time.sleep(FLASH_DEMO_SPEED)
 
     if rainbow_cycle_demo:
-        rainbow_cycle(RAINBOW_CYCLE_WAIT)  # Increase the number to slow down the rainbow.
+        rainbow_cycle(
+            RAINBOW_CYCLE_WAIT
+        )  # Increase the number to slow down the rainbow.
 
     if rainbow_demo:
         rainbow(RAINBOW_WAIT)  # Increase the number to slow down the rainbow.
-
