@@ -1,3 +1,6 @@
+# ignore any file with "secret" in the name
+*secret*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
