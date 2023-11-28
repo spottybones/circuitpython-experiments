@@ -34,8 +34,7 @@ install-libraries:
 # copy my simple libraries
 install-my-libraries:
 	@echo Updating my libraries
-	@cp {{PWD}}/my_palettes.py {{BOARD_PATH}}/
-	@cp {{PWD}}/my_boardcheck.py {{BOARD_PATH}}/
+	@cp {{PWD}}/my_*.py {{BOARD_PATH}}/
 
 # per https://learn.adafruit.com/welcome-to-circuitpython/troubleshooting#macos-sonoma-14-dot-x-disk-errors-writing-to-circuitpy-3160304
 # remount {{BOARD_PATH}} for MacOS Sonoma
