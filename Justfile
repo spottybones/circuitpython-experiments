@@ -2,6 +2,7 @@
 
 # set some constants
 BOARD_PATH := "/Volumes/CIRCUITPY"
+# BOARD_PATH := "/Volumes/RPI-RP2"
 BOARD_ID := `awk -F: '$1=="Board ID"{print $2}' /Volumes/CIRCUITPY/boot_out.txt | tr -d '\r\n'`
 PWD := invocation_directory()
 
@@ -17,7 +18,7 @@ up FILE:
 
 # copy secrets to the board
 copy-secrets:
-	cp {{PWD}}/secrets.py {{BOARD_PATH}}/
+	cp {{PWD}}/settings.toml {{BOARD_PATH}}/
 
 # connect to the board REPL
 repl:
@@ -41,7 +42,7 @@ install-my-libraries:
 remount-board:
 	#!/bin/bash
 	DISKY=$(df | grep {{BOARD_PATH}} | cut -d" " -f1)
-	sudo umount {{BOARD_PATH}}
+	sudo diskutil unmount {{BOARD_PATH}}
 	sudo mkdir {{BOARD_PATH}}
 	sleep 2
 	sudo mount -v -o noasync -t msdos "${DISKY}" {{BOARD_PATH}}
