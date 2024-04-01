@@ -8,6 +8,7 @@ adafruit-circuitpython-led-animation = "*"
 adafruit-circuitpython-neopixel = "*"
 pickleshare = "*"
 adafruit-circuitpython-fancyled = "*"
+adafruit-circuitpython-typing = "*"
 
 [dev-packages]
 ipython = "*"

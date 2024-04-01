@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "99ef4ae7d7814a98ecbda3a5a4c05567b9bc80577168b9c9f57638f89f19036a"
+            "sha256": "dc0bf5cbe8c7a0e16ac501a192e71f9c67bf427788b61978d8ec3f8a7970f12d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,11 +18,11 @@
     "default": {
         "adafruit-blinka": {
             "hashes": [
-                "sha256:0fe2ec27a0cba86fc1b12760277af192fb3792fd190226db8b3ea1cbd90c4c77",
-                "sha256:e8ab9e03fe131305be4ea20b145dc6461fa9c6afefe0e617f99e5a1b8ab92d66"
+                "sha256:6e131b3c2379d67eb185543c4a3d7dfff7ddf3db093f7ad094b1a1423813e6be",
+                "sha256:bb104a598a213053bf5624ed305579ef021efee633dfe91fd1d74c6ff2abdbe3"
             ],
             "markers": "python_full_version >= '3.7.0'",
-            "version": "==8.37.0"
+            "version": "==8.38.0"
         },
         "adafruit-circuitpython-busdevice": {
             "hashes": [
@@ -81,6 +81,7 @@
                 "sha256:4c5c1eeb3ae8a3d2dfa75129654c73690fbdb576d9069542a6ea3355467e1e74",
                 "sha256:4e23d6828deafa4dfd554fd7d3f06b8ff8e2cc554b9c7aecba9d778d45970c18"
             ],
+            "index": "pypi",
             "markers": "python_version >= '3.8'",
             "version": "==1.10.3"
         },
