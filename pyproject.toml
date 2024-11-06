@@ -1,0 +1,18 @@
+[project]
+name = "circuit-python"
+version = "0.1.0"
+description = "My monorepo of circuitpython projects used for learning"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "adafruit-circuitpython-fancyled>=1.4.20",
+    "adafruit-circuitpython-led-animation>=2.9.3",
+    "adafruit-circuitpython-neopixel>=6.3.12",
+    "adafruit-circuitpython-typing>=1.11.1",
+    "pickleshare>=0.7.5",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=8.29.0",
+]
