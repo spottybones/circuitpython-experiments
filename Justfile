@@ -1,4 +1,4 @@
-# vim:set ft=make:
+# vim:set ft=just:
 
 # set some constants
 BOARD_PATH := "/Volumes/CIRCUITPY"
