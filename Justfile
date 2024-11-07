@@ -16,6 +16,12 @@ up FILE:
 	@echo Updating code on board...
 	@cp {{PWD}}/{{FILE}} {{BOARD_PATH}}/code.py
 
+# push code to board
+push:
+  echo Pushing code to board...
+  cp {{PWD}}/*.py {{BOARD_PATH}}/
+  if test -f {{PWD}}/settings.toml; then cp {{PWD}}/settings.toml {{BOARD_PATH}}/; fi
+
 # copy secrets to the board
 copy-secrets:
 	cp {{PWD}}/settings.toml {{BOARD_PATH}}/
