@@ -2,8 +2,7 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileName: fancyled_cpx_rotate.py
 
-""" Simple FancyLED example for Circuit Playground Express
-"""
+"""Simple FancyLED example for Circuit Playground Express"""
 
 from adafruit_circuitplayground.bluefruit import (  # pyright: ignore [reportMissingImports]
     cpb as cpx,
