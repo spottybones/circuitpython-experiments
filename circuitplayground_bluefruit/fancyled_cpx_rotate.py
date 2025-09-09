@@ -16,10 +16,10 @@ cpx.pixels.brightness = 0.2  # We'll use FancyLED's brightness controls
 # Declare a 4-element color palette, this one happens to be a
 # 'blackbody' palette -- good for heat maps and firey effects.
 palette = [
-    fancy.CRGB(1.0, 1.0, 1.0),  # pyright: ignore [reportGeneralTypeIssues] White
-    fancy.CRGB(1.0, 1.0, 0.0),  # pyright: ignore [reportGeneralTypeIssues] Yellow
-    fancy.CRGB(1.0, 0.0, 0.0),  # pyright: ignore [reportGeneralTypeIssues] Red
-    fancy.CRGB(0.0, 0.0, 0.0),  # pyright: ignore [reportGeneralTypeIssues] Black
+    fancy.CRGB(1.0, 1.0, 1.0),  # pyright: ignore [reportArgumentType] White
+    fancy.CRGB(1.0, 1.0, 0.0),  # pyright: ignore [reportArgumentType] Yellow
+    fancy.CRGB(1.0, 0.0, 0.0),  # pyright: ignore [reportArgumentType] Red
+    fancy.CRGB(0.0, 0.0, 0.0),  # pyright: ignore [reportArgumentType] Black
 ]
 
 offset = 0  # Positional offset into color palette to get it to 'spin'
@@ -31,9 +31,10 @@ while True:
         # through the gamma function, pack RGB value and assign to pixel.
         color = fancy.palette_lookup(palette, offset + i / 10)
         color = fancy.gamma_adjust(
-            color, brightness=levels  # pyright: ignore [reportGeneralTypeIssues]
+            color,
+            brightness=levels,  # pyright: ignore [reportArgumentType]
         )
-        cpx.pixels[i] = color.pack()  # pyright: ignore [reportGeneralTypeIssues]
+        cpx.pixels[i] = color.pack()  # pyright: ignore [reportAttributeAccessIssue]
     cpx.pixels.show()
 
     offset += 0.033  # Bigger number = faster spin
