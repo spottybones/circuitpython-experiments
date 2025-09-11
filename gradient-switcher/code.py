@@ -6,12 +6,12 @@ import board
 import neopixel
 
 # import time
-from button import Button, Switch
-from colors import halloween, ireland, pride
-from fader import Fader
+from my_lib.button import Button, Switch
+from my_lib.colors import halloween, ireland, pride
+from my_lib.fader import Fader
 
 rgb = neopixel.NeoPixel(
-    board.NEOPIXEL,  # pyright: ignore [reportGeneralTypeIssues]
+    board.NEOPIXEL,  # pyright: ignore [reportArgumentType]
     10,
     brightness=1.0,
     auto_write=False,
