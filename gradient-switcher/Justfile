@@ -1,0 +1,11 @@
+BOARD_PATH := / "Volumes" / "CIRCUITPY"
+BOARD_ID := `awk -F: '$1=="Board ID"{print $2}' /Volumes/CIRCUITPY/boot_out.txt | tr -d '\r\n'`
+PWD := invocation_directory()
+
+set fallback
+
+@push:
+  echo Pushing code to board...
+  mkdir -p {{BOARD_PATH}}/my_lib
+  cp {{PWD}}/*.py {{BOARD_PATH}}/
+  cp {{PWD}}/my_lib/*.py {{BOARD_PATH}}/my_lib/
