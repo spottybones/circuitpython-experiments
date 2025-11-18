@@ -6,6 +6,7 @@
 """
 
 import time
+
 from digitalio import DigitalInOut, Direction, Pull
 
 

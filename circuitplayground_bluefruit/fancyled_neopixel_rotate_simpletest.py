@@ -1,12 +1,11 @@
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 
-""" Simple FancyLED example for NeoPixel strip
-"""
+"""Simple FancyLED example for NeoPixel strip"""
 
+import adafruit_fancyled.adafruit_fancyled as fancy
 import board
 import neopixel
-import adafruit_fancyled.adafruit_fancyled as fancy
 
 num_leds = 10
 
@@ -17,7 +16,7 @@ palette = [
     fancy.CRGB(0.0, 1.0, 0.0),  # Green
     fancy.CRGB(0.0, 0.5, 0.5),  # Cyan
     fancy.CRGB(0.0, 0.0, 1.0),  # Blue
-    fancy.CRGB(0.5, 0.0, 0.5),
+    fancy.CRGB(0.5, 0.0, 0.5),  # Purple
 ]  # Magenta
 
 # Declare a NeoPixel object on pin D6 with num_leds pixels, no auto-write.
