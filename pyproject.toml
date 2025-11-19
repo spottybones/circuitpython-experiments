@@ -5,15 +5,30 @@ description = "My monorepo of circuitpython projects used for learning"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "adafruit-circuitpython-fancyled>=1.4.20",
-    "adafruit-circuitpython-led-animation>=2.9.3",
-    "adafruit-circuitpython-neopixel>=6.3.12",
-    "adafruit-circuitpython-typing>=1.11.1",
-    "pickleshare>=0.7.5",
+  "adafruit-circuitpython-fancyled>=1.4.20",
+  "adafruit-circuitpython-led-animation>=2.9.3",
+  "adafruit-circuitpython-neopixel>=6.3.12",
+  "adafruit-circuitpython-typing>=1.11.1",
+  "circuitpython-stubs>=9.2.9",
+  "pickleshare>=0.7.5",
 ]
 
 [dependency-groups]
-dev = ["circup>=2.0.4", "ipython>=8.29.0"]
+dev = [
+    "basedpyright>=1.32.1",
+    "circup>=2.0.4",
+    "ipython>=8.29.0",
+    "ruff>=0.14.2",
+]
 
-[tool.pyright]
+[tool.basedpyright]
+typeCheckingMode = "standard"
 reportMissingImports = false
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "W",
+    "I001"
+]
