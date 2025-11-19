@@ -1,5 +1,7 @@
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
+#
+# pyright: reportArgumentType = false
 
 """Simple FancyLED example for NeoPixel strip"""
 
@@ -21,7 +23,12 @@ palette = [
 
 # Declare a NeoPixel object on pin D6 with num_leds pixels, no auto-write.
 # Set brightness to max because we'll be using FancyLED's brightness control.
-pixels = neopixel.NeoPixel(board.NEOPIXEL, num_leds, brightness=1.0, auto_write=False)
+pixels = neopixel.NeoPixel(
+    board.NEOPIXEL,  # pyright: ignore[reportAttributeAccessIssue]
+    num_leds,
+    brightness=1.0,
+    auto_write=False,
+)
 
 offset = 0  # Positional offset into color palette to get it to 'spin'
 levels = (0.25, 0.3, 0.15)  # Color balance / brightness for gamma function
@@ -31,8 +38,8 @@ while True:
         # Load each pixel's color from the palette using an offset, run it
         # through the gamma function, pack RGB value and assign to pixel.
         color = fancy.palette_lookup(palette, offset + i / num_leds)
-        pixels[i] = color.pack()
         color = fancy.gamma_adjust(color, brightness=levels)
+        pixels[i] = color.pack()  # pyright: ignore[reportAttributeAccessIssue]
     pixels.show()
 
     offset += 0.02  # Bigger number = faster spin

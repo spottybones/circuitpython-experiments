@@ -5,13 +5,12 @@
 import board
 import neopixel
 
-# import time
 from my_lib.button import Button, Switch
 from my_lib.colors import halloween, ireland, pride
 from my_lib.fader import Fader
 
 rgb = neopixel.NeoPixel(
-    board.NEOPIXEL,  # pyright: ignore[reportArgumentType]
+    board.NEOPIXEL, # pyright: ignore[reportAttributeAccessIssue]
     10,
     brightness=1.0,
     auto_write=False,
@@ -20,9 +19,9 @@ rgb = neopixel.NeoPixel(
 
 class State:
     def __init__(self) -> None:
-        self.button_a = Button(board.D4, "A", None, self.change)
-        self.button_b = Button(board.D5, "B", None, self.dim)
-        self.switch = Switch(board.D7, "S", self.on, self.off)
+        self.button_a = Button(board.D4, "A", None, self.change)  # pyright: ignore[reportAttributeAccessIssue]
+        self.button_b = Button(board.D5, "B", None, self.dim)  # pyright: ignore[reportAttributeAccessIssue]
+        self.switch = Switch(board.D7, "S", self.on, self.off)  # pyright: ignore[reportAttributeAccessIssue]
 
         self.switch.update()
         self.enabled = self.switch.state
