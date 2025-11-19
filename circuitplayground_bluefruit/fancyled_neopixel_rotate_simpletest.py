@@ -24,14 +24,15 @@ palette = [
 pixels = neopixel.NeoPixel(board.NEOPIXEL, num_leds, brightness=1.0, auto_write=False)
 
 offset = 0  # Positional offset into color palette to get it to 'spin'
+levels = (0.25, 0.3, 0.15)  # Color balance / brightness for gamma function
 
 while True:
     for i in range(num_leds):
         # Load each pixel's color from the palette using an offset, run it
         # through the gamma function, pack RGB value and assign to pixel.
         color = fancy.palette_lookup(palette, offset + i / num_leds)
-        color = fancy.gamma_adjust(color, brightness=0.25)
         pixels[i] = color.pack()
+        color = fancy.gamma_adjust(color, brightness=levels)
     pixels.show()
 
     offset += 0.02  # Bigger number = faster spin
